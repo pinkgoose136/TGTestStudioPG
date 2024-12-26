@@ -6,7 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Test Studio</title>
 
-    <script type="module" crossorigin src="/TGTestStudioPG/assets/index-Bmf51Ys2.js"></script>
+    <script type="text/javascript">
+      (function(l) {
+        console.log(l)
+        if (l.search[1] === '/' ) {
+          var decoded = l.search.slice(1).split('&').map(function(s) { 
+            return s.replace(/~and~/g, '&')
+          }).join('?');
+          window.history.replaceState(null, null,
+              l.pathname.slice(0, -1) + decoded + l.hash
+          );
+        }
+      }(window.location))
+    </script>
+
+    <script type="module" crossorigin src="/TGTestStudioPG/assets/index-ChsUttm_.js"></script>
     <link rel="stylesheet" crossorigin href="/TGTestStudioPG/assets/index-yPrWPm1z.css">
   </head>
   <body>
